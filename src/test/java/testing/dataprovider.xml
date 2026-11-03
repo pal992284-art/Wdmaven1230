@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <test verbose="2"
+          preserve-order="true"
+          name="Login Tests">
+
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url"
+                   value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+
+        <classes>
+
+            <class name="testing.Login_test">
+                <methods>
+                    <include name="browser_setup"/>
+                    <include name="enter_login_credential"/>
+                    <include name="click_on_login_button"/>
+                    <include name="quit_browser"/>
+                </methods>
+            </class>
+
+            <class name="testing.Login_test2">
+                <methods>
+                    <include name="enter_login_credential"/>
+                    <include name="click_on_login_button"/>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+
+</suite>
